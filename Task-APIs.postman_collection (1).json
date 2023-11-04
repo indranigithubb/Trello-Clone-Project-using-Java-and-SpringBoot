@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "c91348a0-680f-4044-896c-f88a6d6aa1dc",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26130117"
+	},
+	"item": [
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "suid",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Task15, Level of difficulty  - 2",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "This task might take 1 day to complete. Please aim to finish this task within one day.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/trello/addTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"addTask"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "suid",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Task15, Level of difficulty  - 2",
+									"type": "text"
+								},
+								{
+									"key": "comments",
+									"value": "This task might take 1 day to complete. Please aim to finish this task within one day.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/trello/addTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"addTask"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:08:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task created successfully\",\n    \"taskID\": 63\n}"
+				}
+			]
+		},
+		{
+			"name": "Task Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trello/allTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"allTasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Task Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/trello/allTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"allTasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:09:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"taskID\": 25,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task1, Level of difficulty  - 4\",\n        \"timestamp\": \"20:48:04\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:48:04.759622\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 27,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task2, Level of difficulty  - 2\",\n        \"timestamp\": \"20:48:32\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:48:32.122004\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 29,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task3, Level of difficulty  - 3\",\n        \"timestamp\": \"20:49:06\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:49:06.535431\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 31,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task4, Level of difficulty  - 5\",\n        \"timestamp\": \"20:49:36\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 3 days to complete. Please aim to finish this task within three days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:49:36.941274\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 35,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task5, Level of difficulty  - 2\",\n        \"timestamp\": \"20:50:08\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:50:08.158571\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 45,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task6, Level of difficulty  - 2\",\n        \"timestamp\": \"21:03:33\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:03:33.795309\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 47,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task7, Level of difficulty  - 2\",\n        \"timestamp\": \"21:04:29\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:04:29.452918\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 49,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task8, Level of difficulty  - 2\",\n        \"timestamp\": \"21:04:37\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:04:37.3699\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 51,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task9, Level of difficulty  - 3\",\n        \"timestamp\": \"21:05:09\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:05:09.36234\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 53,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task10, Level of difficulty  - 3\",\n        \"timestamp\": \"21:05:48\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:05:48.977937\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 55,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task11, Level of difficulty  - 3\",\n        \"timestamp\": \"21:06:04\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:06:04.787975\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 57,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task12, Level of difficulty  - 2\",\n        \"timestamp\": \"21:06:58\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:06:58.597206\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 59,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task13, Level of difficulty  - 5\",\n        \"timestamp\": \"21:07:50\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 3 days to complete. Please aim to finish this task within three days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:07:50.82227\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 61,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task14, Level of difficulty  - 3\",\n        \"timestamp\": \"21:08:13\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 2 days to complete. Please aim to finish this task within two days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:08:13.168371\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 63,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task15, Level of difficulty  - 2\",\n        \"timestamp\": \"21:08:42\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:08:42.943641\",\n        \"completionTime\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Modify task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "taskID",
+							"value": "63",
+							"type": "text"
+						},
+						{
+							"key": "suid",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "DOING",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "comments",
+							"value": "Adding more comments",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/trello/modifyTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"modifyTask"
+					],
+					"query": [
+						{
+							"key": "taskID",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "suid",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "DOING",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Modify task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "taskID",
+									"value": "27",
+									"type": "text"
+								},
+								{
+									"key": "suid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "DOING",
+									"type": "text"
+								},
+								{
+									"key": "comments",
+									"value": "Adding more comments",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/trello/modifyTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"modifyTask"
+							],
+							"query": [
+								{
+									"key": "taskID",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "suid",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "DOING",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:12:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task modified successfully.\",\n    \"taskID\": 27\n}"
+				}
+			]
+		},
+		{
+			"name": "History Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trello/task/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"task",
+						"history"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "History Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/trello/task/history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"task",
+								"history"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:09:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"num\": 26,\n        \"taskID\": 25,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task1, Level of difficulty  - 4\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 28,\n        \"taskID\": 27,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task2, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 30,\n        \"taskID\": 29,\n        \"suid\": 1,\n        \"state\": \"TODO\",\n        \"name\": \"Rishitha\",\n        \"description\": \"Task3, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 32,\n        \"taskID\": 31,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task4, Level of difficulty  - 5\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 34,\n        \"taskID\": 33,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task4, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 36,\n        \"taskID\": 35,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task5, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 38,\n        \"taskID\": 37,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task6, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 40,\n        \"taskID\": 39,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task7, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 42,\n        \"taskID\": 41,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task7, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 44,\n        \"taskID\": 43,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task7, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 46,\n        \"taskID\": 45,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task6, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 48,\n        \"taskID\": 47,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task7, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 50,\n        \"taskID\": 49,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task8, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 52,\n        \"taskID\": 51,\n        \"suid\": 3,\n        \"state\": \"TODO\",\n        \"name\": \"Indrani\",\n        \"description\": \"Task9, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 54,\n        \"taskID\": 53,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task10, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 56,\n        \"taskID\": 55,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task11, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 58,\n        \"taskID\": 57,\n        \"suid\": 4,\n        \"state\": \"TODO\",\n        \"name\": \"John\",\n        \"description\": \"Task12, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 60,\n        \"taskID\": 59,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task13, Level of difficulty  - 5\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 62,\n        \"taskID\": 61,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task14, Level of difficulty  - 3\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    },\n    {\n        \"num\": 64,\n        \"taskID\": 63,\n        \"suid\": 5,\n        \"state\": \"TODO\",\n        \"name\": \"Bob\",\n        \"description\": \"Task15, Level of difficulty  - 2\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "taskID",
+							"value": "43",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/trello/delTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"delTask"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "taskID",
+									"value": "43",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/trello/delTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"delTask"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:02:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task deleted successfully.\",\n    \"taskID\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Tasks assigned to specific user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trello/userTasks/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trello",
+						"userTasks",
+						"5"
+					],
+					"query": [
+						{
+							"key": "status ",
+							"value": " \"TODO\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/trello/userTasks/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trello",
+								"userTasks",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Nov 2023 01:08:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"taskID\": 31,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task4, Level of difficulty  - 5\",\n        \"timestamp\": \"20:49:36\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 3 days to complete. Please aim to finish this task within three days.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:49:36.941274\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 35,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task5, Level of difficulty  - 2\",\n        \"timestamp\": \"20:50:08\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T20:50:08.158571\",\n        \"completionTime\": null\n    },\n    {\n        \"taskID\": 45,\n        \"suid\": 2,\n        \"state\": \"TODO\",\n        \"name\": \"Mukkesh\",\n        \"description\": \"Task6, Level of difficulty  - 2\",\n        \"timestamp\": \"21:03:33\",\n        \"timeInTodo\": null,\n        \"timeInDoing\": null,\n        \"timeInDone\": null,\n        \"comments\": [\n            \"This task might take 1 day to complete. Please aim to finish this task within one day.\"\n        ],\n        \"lastStateChangeTimestamp\": \"2023-11-02T21:03:33.795309\",\n        \"completionTime\": null\n    }\n]"
+				}
+			]
+		}
+	]
+}
